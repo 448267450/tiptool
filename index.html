@@ -6,55 +6,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <script src="bootstrap.bundle.min.js"></script>
+
    
 </head>
 <body>
-    <div class="container justify-content-center bg-success " style="margin-top: 40px; padding-bottom: 40px; width: 60%;">
-        <div class="text-center">
-            <small class="text-body-secondary card-title">ITMD 541 - Lab3 - Wenkun Ren</small>
-            <h1>Tip Calculator</h1>
-        </div>
-
-    <form>
-        <div class="row mb-3 justify-content-center">
-          <label for="inputBill3 text-end" class="col-sm-2 col-form-label text-end text-nowrap">Bill Total</label>
-          <div class="col-sm-5">
-            <input type="number" value="0.00" class="form-control" id="inputBill3">
+      <div class="container">
+        <div class="container-fluid bg-success py-auto col-auto">
+            <div class="text-center">
+                <small class="text-body-secondary card-title">ITMD 541 - Lab3 - Wenkun Ren</small>
+                <h1>Tip Calculator</h1>
+            </div>
+    
+        <form>
+            <div class="row mb-3 justify-content-center">
+              <label for="inputBill3 text-end" class="col-sm-2 col-form-label text-end text-nowrap">Bill Total</label>
+              <div class="col-sm-6">
+                <input type="number" value="0.00" class="form-control" id="inputBill3">
+              </div>
+            </div>
+    
+            <div class="row mb-3 justify-content-center">
+                <label for="customRange3" class="col-sm-2 col-form-label text-end text-nowra">Tip</label>
+                <div class="col-sm-6">
+                    <input type="range" class="form-range" min="0" max="1" step="0.0001" id="customRange3" value="0.15" onchange="updateTipPercentage(this.value)">
+                </div>
+            </div>
+    
+            <fieldset disabled>
+                <div class="row mb-3 justify-content-center" >
+                    <label for="disabledTextInput" class="col-form-label col-sm-2 text-end text-nowrap">Tip Percentage</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="disabledTextInput" class="form-control bg-secondary" value="15.00%">
+                    </div>
+                </div>
+    
+                <div class="row mb-3 justify-content-center" >
+                    <label for="disabledTipAmount" class="col-form-label col-sm-2 text-end text-nowrap">Tip Amount</label>
+                    <div class="col-sm-6">
+                        <input type="number" id="disabledTipAmount" class="form-control bg-secondary" value="0.00">
+                    </div>
+                </div>
+    
+                <div class="row mb-3 justify-content-center" >
+                    <label for="disabledBillWithTip" class="col-form-label col-sm-2 text-end text-nowrap">Total Bill with Tip</label>
+                    <div class="col-sm-6">
+                        <input type="number" id="disabledBillWithTip" class="form-control bg-secondary" value="0.00">
+                    </div>
+                </div>
+            </fieldset>
+    
+            
+          </form>
           </div>
-        </div>
-
-        <div class="row mb-3 justify-content-center">
-            <label for="customRange3" class="col-sm-2 col-form-label text-end text-nowra">Tip</label>
-            <div class="col-sm-5">
-                <input type="range" class="form-range" min="0" max="1" step="0.0001" id="customRange3" value="0.15" onchange="updateTipPercentage(this.value)">
-            </div>
-        </div>
-
-        <fieldset disabled>
-            <div class="row mb-3 justify-content-center" >
-                <label for="disabledTextInput" class="col-form-label col-sm-2 text-end text-nowrap">Tip Percentage</label>
-                <div class="col-sm-5">
-                    <input type="text" id="disabledTextInput" class="form-control bg-secondary" value="15.00%">
-                </div>
-            </div>
-
-            <div class="row mb-3 justify-content-center" >
-                <label for="disabledTipAmount" class="col-form-label col-sm-2 text-end text-nowrap">Tip Amount</label>
-                <div class="col-sm-5">
-                    <input type="number" id="disabledTipAmount" class="form-control bg-secondary" value="0.00">
-                </div>
-            </div>
-
-            <div class="row mb-3 justify-content-center" >
-                <label for="disabledBillWithTip" class="col-form-label col-sm-2 text-end text-nowrap">Total Bill with Tip</label>
-                <div class="col-sm-5">
-                    <input type="number" id="disabledBillWithTip" class="form-control bg-secondary" value="0.00">
-                </div>
-            </div>
-        </fieldset>
-
-        
-      </form>
       </div>
       <script src="tipCalculator.js"></script>
 </body>
