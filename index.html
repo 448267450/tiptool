@@ -5,69 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="bootstrap.bundle.min.js"></script>
-    <style>
-        .container {
-            margin: 20px auto; 
-        }
 
-      
-        h1 {
-            font-size: 1.5rem; 
-            margin-bottom: 20px; 
-        }
-
-        
-        .form-control {
-            width: 100%; 
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="container bg-success">
             <div class="row">
                 <div class="col text-center">
-                    <small class="text-body-secondary card-title">ITMD 541 - Lab3 - Wenkun Ren</small>
-                    <h1>Tip Calculator</h1>
+                    <small class="card-title text-light">ITMD 541 - Lab3 - Wenkun Ren</small>
+                    <h1 class="text-light">Tip Calculator</h1>
                 </div>
             </div>
     
             <form>
                 <div class="row mb-3">
-                    <label for="inputBill3" class="col-sm-2 col-form-label text-sm-end">Bill Total</label>
-                    <div class="col-sm-10">
-                        <input class="form-control" id="inputBill3">
-                        <div id="billTotalError" class="error-message">Please enter a valid number</div>
+                    <label for="inputBill3" class="col-sm-2 col-form-label text-light text-sm-end">Bill Total</label>
+                    <div class="col-sm-9">
+                        <input class="form-control border-warning" id="inputBill3">
+                        <div id="billTotalError" class="error-message text-danger">Please enter a valid number</div>
                     </div>
                 </div>
     
                 <div class="row mb-3">
-                    <label for="customRange3" class="col-sm-2 col-form-label text-sm-end">Tip</label>
-                    <div class="col-sm-10">
+                    <label for="customRange3" class="col-sm-2 col-form-label text-sm-end text-light">Tip</label>
+                    <div class="col-sm-9">
                         <input type="range" class="form-range" min="0" max="1" step="0.0001" id="customRange3" value="0.15" onchange="updateTipPercentage(this.value)">
                     </div>
                 </div>
     
                 <fieldset disabled>
                     <div class="row mb-3">
-                        <label for="disabledTextInput" class="col-sm-2 col-form-label text-sm-end">Tip Percentage</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="disabledTextInput" class="form-control bg-secondary" value="15.00%">
+                        <label for="disabledTextInput" class="col-sm-2 col-form-label text-light text-sm-end">Tip Percentage</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="disabledTextInput" class="form-control bg-secondary border-warning" value="15.00%">
                         </div>
                     </div>
     
                     <div class="row mb-3">
-                        <label for="disabledTipAmount" class="col-sm-2 col-form-label text-sm-end">Tip Amount</label>
-                        <div class="col-sm-10">
-                            <input type="number" id="disabledTipAmount" class="form-control bg-secondary" value="0.00">
+                        <label for="disabledTipAmount" class="col-sm-2 col-form-label text-light text-sm-end">Tip Amount</label>
+                        <div class="col-sm-9">
+                            <input type="number" id="disabledTipAmount" class="form-control border-warning bg-secondary" value="0.00">
                         </div>
                     </div>
     
                     <div class="row mb-3">
-                        <label for="disabledBillWithTip" class="col-sm-2 col-form-label text-sm-end">Total Bill with Tip</label>
-                        <div class="col-sm-10">
-                            <input type="number" id="disabledBillWithTip" class="form-control bg-secondary" value="0.00">
+                        <label for="disabledBillWithTip" class="col-sm-2 col-form-label text-light text-sm-end">Total Bill with Tip</label>
+                        <div class="col-sm-9">
+                            <input type="number" id="disabledBillWithTip" class="form-control border-warning bg-secondary" value="0.00">
                         </div>
                     </div>
                 </fieldset>
