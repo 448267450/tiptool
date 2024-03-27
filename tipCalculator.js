@@ -22,3 +22,15 @@ function updateTipPercentage(value) {
 billTotal.addEventListener('input', function(){
     updateTipAmount();
 });
+
+document.getElementById('inputBill3').addEventListener('input', function() {
+    var billTotalInput = this.value.trim();
+    var billTotalError = document.getElementById('billTotalError');
+    var isValid = !isNaN(billTotalInput) && billTotalInput !== '';
+
+    if (!isValid) {
+        billTotalError.style.display = 'block';
+    } else {
+        billTotalError.style.display = 'none';
+    }
+});
